@@ -1,4 +1,4 @@
-# def dog_years():
+def dog_years():
     
 #     """
 #     Create a program that counts a dog's age in dog's years. The program should only calculate dog years until 20 human years.
@@ -12,6 +12,23 @@
 #     """
 
 #     #enter your code here
+    human_years = int(input("Input a dog's age in human years: "))
+
+    # Check if the input is within the expected range
+    if human_years > 20 or human_years < 1:
+        raise ValueError('Enter a number between 1 and 20')
+
+    # Calculate dog's age
+    if human_years == 1:
+        dogs_age = 10.5
+    elif human_years == 2:
+        dogs_age = 10.5 * 2
+    else:
+        dogs_age = 21 + (human_years - 2) * 4
+
+    return f"The dog's age in dog's years is {dogs_age}"
+    
+
 
 def fizzbuzz(num):
     """
@@ -80,6 +97,6 @@ def cube_sum(number):
 #     """
     
 #     #enter your code here
-    digits = list(str(number))
+    digits = str(number)
 
     return sum([int(n) * int(n) * int(n) for n in digits])

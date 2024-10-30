@@ -5,13 +5,13 @@ import sys
 from io import StringIO
 
 class TestFun(unittest.TestCase):
-    # @patch('builtins.input', side_effect=[20])
-    # def test_dog_years(self, mock_input):
-    #     captured_output = StringIO()
-    #     sys.stdout = captured_output
-    #     dog_years()
-    #     sys.stdout = sys.__stdout__
-    #     self.assertEqual(captured_output.getvalue().strip(), "The dog's age in dog's years is 93")
+    @patch('builtins.input', side_effect=[20])
+    def test_dog_years(self, mock_input):
+        # Call the function and capture its return value
+        result = dog_years()
+        # Verify the result matches expected output
+        self.assertEqual(result, "The dog's age in dog's years is 93")
+ 
 
     # Test fizzbuzz function
     def test_fizzbuzz(self):
