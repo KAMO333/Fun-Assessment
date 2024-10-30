@@ -82,9 +82,4 @@ def cube_sum(number):
 #     #enter your code here
     digits = list(str(number))
 
-    cubes = []
-
-    for n in digits:
-        cubes.append(int(n) * int(n) * int(n))
-
-    return sum(cubes)
+    return sum([int(n) * int(n) * int(n) for n in digits])
