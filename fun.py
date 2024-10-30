@@ -69,7 +69,7 @@ def word_lengths(sentence):
         return frequency
 
 
-# def cube_sum(number):
+def cube_sum(number):
 #     """
 #     Create a program that calculates the sum of the cubes of each digit in a number.
     
@@ -80,3 +80,11 @@ def word_lengths(sentence):
 #     """
     
 #     #enter your code here
+    digits = list(str(number))
+
+    cubes = []
+
+    for n in digits:
+        cubes.append(int(n) * int(n) * int(n))
+
+    return sum(cubes)

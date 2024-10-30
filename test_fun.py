@@ -28,13 +28,13 @@ class TestFun(unittest.TestCase):
         with self.assertRaises(ValueError):
             word_lengths(123)
 
-    # def test_cube_sum(self):
-    #     self.assertEqual(cube_sum(123), 36)  # 1^3 + 2^3 + 3^3 = 1 + 8 + 27 = 36
-    #     self.assertEqual(cube_sum(0), 0)  # 0^3 = 0
-    #     self.assertEqual(cube_sum(456), 405)  # 4^3 + 5^3 + 6^3 = 64 + 125 + 216 = 405
-    #     self.assertEqual(cube_sum(999), 2187)  # 9^3 + 9^3 + 9^3 = 729 + 729 + 729 = 2187
-    #     with self.assertRaises(ValueError):
-    #         cube_sum(-123)
+    def test_cube_sum(self):
+        self.assertEqual(cube_sum(123), 36)  # 1^3 + 2^3 + 3^3 = 1 + 8 + 27 = 36
+        self.assertEqual(cube_sum(0), 0)  # 0^3 = 0
+        self.assertEqual(cube_sum(456), 405)  # 4^3 + 5^3 + 6^3 = 64 + 125 + 216 = 405
+        self.assertEqual(cube_sum(999), 2187)  # 9^3 + 9^3 + 9^3 = 729 + 729 + 729 = 2187
+        with self.assertRaises(ValueError):
+            cube_sum(-123)
 
 if __name__ == "__main__":
     unittest.main()
